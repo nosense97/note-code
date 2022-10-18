@@ -27,7 +27,7 @@ See real examples:
             var options = {
                 width: 600,
                 height: 400,
-                legend: {
+                legend: { // ghi chú của chart 
                     position: 'top',
                     maxLines: 3
                 },
@@ -43,7 +43,7 @@ See real examples:
                     title: 'Month'
                 },
                 seriesType: 'bars',
-                series: {
+                series: { // bắt đầu từ 0, kí hiệu thứ 2 là đường thẳng
                     2: {
                         type: 'line'
                     }
