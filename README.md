@@ -9,7 +9,7 @@ See real examples:
 ## Table of contents
 
 > * [Branch Google Chart](#about)
->   * [Combo Chart With Lines And Stacked Column](#combo-chart-with-lines-and-stacked-column)
+>   * [Combo Chart With Lines And Stacked Column / Biểu đồ kết hợp cột đường với cột chồng](#combo-chart-with-lines-and-stacked-column)
 
 
 ## Combo Chart With Lines And Stacked Column  
