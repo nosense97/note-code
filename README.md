@@ -16,44 +16,44 @@ See real examples:
 
 ``` 
 <script type="text/javascript">
-        var BuildColumnChart = (params) => {
+    var BuildColumnChart = (params) => {
 
-            columnChartElement = document.querySelector(params.div)
-            if (columnChartElement) {
+        columnChartElement = document.querySelector(params.div)
+        if (columnChartElement) {
 
-                google.charts.load('current', {
-                    'packages': ['bar']
-                });
-                google.charts.setOnLoadCallback(drawChart);
+            google.charts.load('current', {
+                'packages': ['bar']
+            });
+            google.charts.setOnLoadCallback(drawChart);
 
-                function drawChart() {
+            function drawChart() {
 
-                    var data = google.visualization.arrayToDataTable(params.dataTable);
-                    var chart = new google.charts.Bar(columnChartElement);
-                    chart.draw(data, google.charts.Bar.convertOptions(params.options));
-                }
+                var data = google.visualization.arrayToDataTable(params.dataTable);
+                var chart = new google.charts.Bar(columnChartElement);
+                chart.draw(data, google.charts.Bar.convertOptions(params.options));
             }
         }
+    }
 
-        BuildColumnChart({
-            div: '#columnchart_material',
-            dataTable: [
-                ['Year', 'Sales', 'Expenses', 'Profit'],
-                ['2014', 1000, 400, 200],
-                ['2015', 1170, 460, 250],
-                ['2016', 660, 1120, 300],
-                ['2017', 1030, 540, 350]
-            ],
-            options: {
-                width: 600,
-                height: 400,
-                chart: {
-                    title: 'Company Performance',
-                    subtitle: 'Sales, Expenses, and Profit: 2014-2017',
-                }
+    BuildColumnChart({
+        div: '#columnchart_material',
+        dataTable: [
+            ['Year', 'Sales', 'Expenses', 'Profit'],
+            ['2014', 1000, 400, 200],
+            ['2015', 1170, 460, 250],
+            ['2016', 660, 1120, 300],
+            ['2017', 1030, 540, 350]
+        ],
+        options: {
+            width: 600,
+            height: 400,
+            chart: {
+                title: 'Company Performance',
+                subtitle: 'Sales, Expenses, and Profit: 2014-2017',
             }
-        })
-    </script>
+        }
+    })
+</script>
 ```
 This is result: 
 ![image](https://user-images.githubusercontent.com/108250685/196375980-2dde583b-52e1-4a1b-96b9-be87650787c9.png)
