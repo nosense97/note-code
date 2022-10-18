@@ -8,8 +8,55 @@ See real examples:
 
 ## Table of contents
 
-> * [Branch Google Chart](#about)
->   * [Combo Chart With Lines And Stacked Column / Biểu đồ kết hợp cột đường với cột chồng](#combo-chart-with-lines-and-stacked-column)
+> * [Draw Chart Basic With JS](#google-chart-with-js-basic)
+> * [Combo Chart With Lines And Stacked Column / Biểu đồ kết hợp cột đường với cột chồng](#combo-chart-with-lines-and-stacked-column)  
+
+  
+## Google Chart With JS Basic
+
+``` 
+<script type="text/javascript">
+        var BuildColumnChart = (params) => {
+
+            columnChartElement = document.querySelector(params.div)
+            if (columnChartElement) {
+
+                google.charts.load('current', {
+                    'packages': ['bar']
+                });
+                google.charts.setOnLoadCallback(drawChart);
+
+                function drawChart() {
+
+                    var data = google.visualization.arrayToDataTable(params.dataTable);
+                    var chart = new google.charts.Bar(columnChartElement);
+                    chart.draw(data, google.charts.Bar.convertOptions(params.options));
+                }
+            }
+        }
+
+        BuildColumnChart({
+            div: '#columnchart_material',
+            dataTable: [
+                ['Year', 'Sales', 'Expenses', 'Profit'],
+                ['2014', 1000, 400, 200],
+                ['2015', 1170, 460, 250],
+                ['2016', 660, 1120, 300],
+                ['2017', 1030, 540, 350]
+            ],
+            options: {
+                width: 600,
+                height: 400,
+                chart: {
+                    title: 'Company Performance',
+                    subtitle: 'Sales, Expenses, and Profit: 2014-2017',
+                }
+            }
+        })
+    </script>
+```
+This is result: 
+![image](https://user-images.githubusercontent.com/108250685/196375980-2dde583b-52e1-4a1b-96b9-be87650787c9.png)
 
 
 ## Combo Chart With Lines And Stacked Column  
