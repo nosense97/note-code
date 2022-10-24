@@ -17,7 +17,7 @@ See real examples:
 ## Calculate Time Difference with JavaScript
 
 ```
-var caculateTime(start, end) {
+var caculateTime = (start, end) => {
             start = start.split(":");
             end = end.split(":");
             var startDate = new Date(0, 0, 0, start[0], start[1], 0);
