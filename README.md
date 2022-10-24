@@ -1,7 +1,23 @@
-# note-code
-note-code
 
-```function diff(start, end) {
+
+
+# JS Core / Note Code
+
+## About 
+
+See real examples:
+
+> * [stackoverflow](stackoverflow.com)
+
+## Table of contents
+
+> * [Calculate Time Difference with JavaScript](#calculate-time-difference-with-javascript)
+
+
+## Calculate Time Difference with JavaScript
+
+```
+var caculateTime(start, end) {
             start = start.split(":");
             end = end.split(":");
             var startDate = new Date(0, 0, 0, start[0], start[1], 0);
@@ -15,5 +31,5 @@ note-code
                 hours = hours + 24;
 
             return (hours <= 9 ? "0" : "") + hours + ":" + (minutes <= 9 ? "0" : "") + minutes;
-        }
-        ```
+}
+```
